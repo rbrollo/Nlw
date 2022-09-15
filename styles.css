@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    margin-top: 32px;
+    text-align: center;
+    animation: fromTop .5s .2s backwards;
+
+}
+
+header div img:hover {
+    transform: scale(1.1)
+}
+
+header img {
+    border-radius: 50%;
+    padding: 4px;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    width: 120px;
+    height: 120px;
+    transition: .3s;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-image: url(./assets/bg.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;
+}
+
+main {
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+    display: grid;
+    gap: 24px;
+}
+
+section {
+    color: white;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+}
+
+section div {
+    background-color: #2A2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+
+}
+
+section h2 {
+    letter-spacing: -0.47px;
+}
+
+section p {
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+
+section ul {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+section ul li {
+    transition: .3s;
+}
+
+section ul li:hover {
+    transform: scale(1.1)
+}
+
+.games-list img {
+    border-radius: 8px;
+    width: 90px;
+}
+
+.channel-list img {
+    width: 70px;
+    border: 1px solid #443E54;
+    border-radius: 50%;
+}
+
+/* Animations*/
+main section:nth-child(1) {
+    animation: fromBottom .5s .2s backwards;
+}
+
+main section:nth-child(2) {
+    animation: fromBottom .5s .4s backwards;
+}
+
+main section:nth-child(3) {
+    animation: fromBottom .5s .6s backwards;
+}
+
+@keyframes fromTop {
+
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes fromBottom {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
